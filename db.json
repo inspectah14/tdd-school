@@ -1,0 +1,45 @@
+{
+  "courses": [
+    {
+      "courseId": 1,
+      "title": "Economics",
+      "length": "16 weeks",
+      "descr": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "startDate": "24/01/2023"
+    },
+    {
+      "courseId": 2,
+      "title": "History",
+      "length": "16 weeks",
+      "descr": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "startDate": "24/01/2023"
+    }
+  ],
+  "teachers": [
+    {
+      "firstName": "Patrizio",
+      "lastName": "Munozza",
+      "socialNumber": "000131",
+      "email": "patri@gmail.com",
+      "phone": "086584220",
+      "competencies": [
+        "History",
+        "Economics",
+        "Physical Education",
+        "Languages"
+      ]
+    },
+    {
+      "firstName": "Anine",
+      "lastName": "Lyzza",
+      "socialNumber": "011020",
+      "email": "anine@gmail.com",
+      "phone": "0866858220",
+      "competencies": [
+        "Marketing",
+        "Physical Education",
+        "Presenational Skills"
+      ]
+    }
+  ]
+}
