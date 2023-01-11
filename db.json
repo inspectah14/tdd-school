@@ -17,6 +17,7 @@
   ],
   "teachers": [
     {
+      "teacherId": 1,
       "firstName": "Patrizio",
       "lastName": "Munozza",
       "socialNumber": "000131",
@@ -30,6 +31,7 @@
       ]
     },
     {
+      "teacherId": 2,
       "firstName": "Anine",
       "lastName": "Lyzza",
       "socialNumber": "011020",
@@ -38,7 +40,9 @@
       "competencies": [
         "Marketing",
         "Physical Education",
-        "Presenational Skills"
+        "Presenational Skills",
+        "Purchasing",
+        "Merchandising"
       ]
     }
   ]

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const useFetch = (url) => {
+const useFetchLists = (url) => {
   const [data, setData] = useState(undefined);
   const [error, setError] = useState("");
 
@@ -23,4 +23,4 @@ const useFetch = (url) => {
   return { data, error };
 };
 
-export default useFetch;
+export default useFetchLists;
