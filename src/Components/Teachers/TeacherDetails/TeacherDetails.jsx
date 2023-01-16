@@ -30,9 +30,7 @@ const TeacherDetails = () => {
 
   useEffect(() => {
     if (data) {
-      const teacherDetails = data.find(
-        (teacher) => teacher.teacherId === Number(id)
-      );
+      const teacherDetails = data.find((teacher) => teacher.id === Number(id));
       setTeacher(teacherDetails);
     }
   }, [data]);
@@ -50,7 +48,7 @@ const TeacherDetails = () => {
           <H2>
             {teacher.firstName} {teacher.lastName}
           </H2>
-          <div key={teacher.teacherId}>
+          <div key={teacher.id}>
             <p>Social Security Number: {teacher.socialNumber} </p>
             <p>Email: {teacher.email} </p>
             <p>Phone: {teacher.phone} </p>

@@ -1,23 +1,58 @@
 {
   "courses": [
     {
-      "courseId": 1,
+      "id": 1,
       "title": "Economics",
       "length": "16 weeks",
-      "descr": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "startDate": "24/01/2023"
+      "startDate": "24/01/2023",
+      "descr": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     },
     {
-      "courseId": 2,
+      "id": 2,
       "title": "History",
       "length": "16 weeks",
-      "descr": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      "startDate": "24/01/2023"
+      "startDate": "24/01/2023",
+      "descr": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    },
+    {
+      "id": 3,
+      "title": "Physical Education",
+      "length": "8 weeks",
+      "startDate": "16/01/2023",
+      "descr": "Learn an array of different types of sports and exercises. These might include football, tennis, padel, and floorball."
+    },
+    {
+      "id": 4,
+      "title": "International Relations",
+      "length": "10 weeks",
+      "startDate": "23/01/2023",
+      "descr": "We cover allt the latest global events, both positive and negative issues."
+    },
+    {
+      "id": 5,
+      "title": "Physics",
+      "length": "12 weeks",
+      "startDate": "6/02/2023",
+      "descr": "ALsjasjj jasjajsjak kjaksjkasj jkjaksjjakj jkajskjs"
+    },
+    {
+      "id": 6,
+      "title": "Biology",
+      "length": "10 weeks",
+      "startDate": "23/01/2023",
+      "descr": "herororor eorooro lasklwrj jashdakjs"
+    },
+    {
+      "id": 7,
+      "title": "Chemistry",
+      "length": "12 weeks",
+      "startDate": "23/01/2023",
+      "descr": "asasasas asasa as"
     }
   ],
   "teachers": [
     {
-      "teacherId": 1,
+      "id": 1,
       "firstName": "Patrizio",
       "lastName": "Munozza",
       "socialNumber": "000131",
@@ -31,7 +66,7 @@
       ]
     },
     {
-      "teacherId": 2,
+      "id": 2,
       "firstName": "Anine",
       "lastName": "Lyzza",
       "socialNumber": "011020",

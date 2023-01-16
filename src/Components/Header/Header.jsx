@@ -54,7 +54,7 @@ const Header = () => {
         </div>
         <LinkBox>
           <StyledLink to="/">home</StyledLink>
-          <StyledLink to="#">add courses</StyledLink>
+          <StyledLink to="/addcourses">add courses</StyledLink>
           <StyledLink to="#">add teachers</StyledLink>
         </LinkBox>
       </NavBar>

@@ -52,10 +52,7 @@ const TeacherList = () => {
     <StyledWrapper>
       <H2>Teachers</H2>
       {teachers.map((teacher) => (
-        <StyledLink
-          to={`/teacher/${teacher.teacherId}`}
-          key={teacher.teacherId}
-        >
+        <StyledLink to={`/teacher/${teacher.id}`} key={teacher.id}>
           <div>
             <h3>
               {teacher.firstName} {teacher.lastName}

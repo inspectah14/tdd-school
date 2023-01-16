@@ -3,6 +3,7 @@ import Home from "./Screens/Home/Home";
 import Header from "./Components/Header/Header";
 import CourseDetails from "./Components/Courses/CourseDetails/CourseDetails";
 import TeacherDetails from "./Components/Teachers/TeacherDetails/TeacherDetails";
+import AddCourses from "./Screens/AddCourses/AddCourses";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/course/:id" element={<CourseDetails />} />
         <Route path="/teacher/:id" element={<TeacherDetails />} />
+        <Route path="/addcourses" element={<AddCourses />} />
       </Routes>
     </div>
   );

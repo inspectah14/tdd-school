@@ -26,9 +26,7 @@ const CourseDetails = () => {
 
   useEffect(() => {
     if (data) {
-      const courseDetails = data.find(
-        (course) => course.courseId === Number(id)
-      );
+      const courseDetails = data.find((course) => course.id === Number(id));
       setCourse(courseDetails);
     }
   }, [data]);
@@ -44,8 +42,8 @@ const CourseDetails = () => {
       {course ? (
         <StyledWrapper>
           <H2> {course.title} </H2>
-          <div key={course.courseId}>
-            <p>Course ID: {course.courseId} </p>
+          <div key={course.id}>
+            <p>Course ID: {course.id} </p>
             <p>Course length: {course.length} </p>
             <p>Start date: {course.startDate} </p>
             <p>Description: {course.descr} </p>
