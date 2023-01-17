@@ -1,5 +1,4 @@
-import CourseList from "../../Components/Courses/CourseList/CourseList";
-import TeacherList from "../../Components/Teachers/TeacherList/TeacherList";
+import Lists from "../../Components/Lists/RenderLists/Lists";
 import styled from "styled-components";
 
 const StyledMain = styled.main`
@@ -13,8 +12,7 @@ const StyledMain = styled.main`
 const Home = () => {
   return (
     <StyledMain>
-      <CourseList />
-      <TeacherList />
+      <Lists />
     </StyledMain>
   );
 };

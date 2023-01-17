@@ -1,9 +1,10 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "./Screens/Home/Home";
 import Header from "./Components/Header/Header";
-import CourseDetails from "./Components/Courses/CourseDetails/CourseDetails";
-import TeacherDetails from "./Components/Teachers/TeacherDetails/TeacherDetails";
+import CourseDetails from "./Components/CourseDetails/CourseDetails";
+import TeacherDetails from "./Components/TeacherDetails/TeacherDetails";
 import AddCourses from "./Screens/AddCourses/AddCourses";
+import AddTeachers from "./Screens/AddTeachers/AddTeachers";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/course/:id" element={<CourseDetails />} />
         <Route path="/teacher/:id" element={<TeacherDetails />} />
         <Route path="/addcourses" element={<AddCourses />} />
+        <Route path="/addteachers" element={<AddTeachers />} />
       </Routes>
     </div>
   );

@@ -13,19 +13,19 @@ const StyledMain = styled.main`
   width: 100%;
 `;
 
-const AddCourses = () => {
+const AddTeachers = () => {
   const context = useContext(AuthContext);
 
   return (
     <StyledMain>
       {!context.isLoggedIn ? (
         <>
-          <h3>Please login below to add new course</h3>
+          <h3>Please login below to add a new teacher</h3>
           <Login />
         </>
       ) : (
         <>
-          <h3>Add new course</h3>
+          <h3>Add new teacher</h3>
           <Form />
         </>
       )}
@@ -33,4 +33,4 @@ const AddCourses = () => {
   );
 };
 
-export default AddCourses;
+export default AddTeachers;

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import useFetchLists from "../../../hooks/useFetchLists";
+import useFetchLists from "../../hooks/useFetchLists";
 import styled from "styled-components";
 
 const StyledWrapper = styled.div`
