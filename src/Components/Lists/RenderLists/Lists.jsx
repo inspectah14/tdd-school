@@ -1,5 +1,4 @@
-import { useEffect, useState, useContext } from "react";
-import AuthContext from "../../../store/auth-context";
+import { useEffect, useState } from "react";
 import useFetch from "../../../hooks/useFetch";
 import styled from "styled-components";
 import ListComponent from "../ListComponent/ListComponent";
