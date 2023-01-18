@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
+import Burger from "../HamburgerMenu/Burger/Burger";
+import Menu from "../HamburgerMenu/Menu/Menu";
 
 const StyledHeader = styled.header`
   width: 100%;
@@ -18,19 +20,33 @@ const NavBar = styled.nav`
   display: flex;
   width: 100%;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
+  @media (min-width: 800px) {
+    justify-content: space-evenly;
+    align-items: center;
+  }
 `;
 
 const H1 = styled.h1`
   color: white;
-  font-size: 20px;
+  font-size: 16px;
+
+  @media (min-width: 500px) {
+    font-size: 18px;
+  }
+  @media (min-width: 800px) {
+    font-size: 20px;
+  }
 `;
 
 const LinkBox = styled.div`
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  display: none;
+  @media (min-width: 800px) {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
 `;
 
 const StyledLink = styled(Link)`
@@ -46,8 +62,14 @@ const StyledLink = styled(Link)`
 `;
 
 const Header = () => {
+  const [isOpen, setOpen] = useState(false);
+  const menuId = "main-menu";
   return (
     <StyledHeader>
+      <>
+        <Burger isOpen={isOpen} setOpen={setOpen} aria-controls={menuId} />
+        <Menu isOpen={isOpen} setOpen={setOpen} id={menuId} />
+      </>
       <NavBar>
         <div>
           <H1>International School of Södermalm</H1>

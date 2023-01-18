@@ -22,12 +22,11 @@ const CourseDetails = () => {
   const [course, setCourse] = useState({});
   const { id } = useParams();
 
-  const { data, error } = useFetchLists("http://localhost:3010/courses");
+  const { data, error } = useFetchLists(`http://localhost:3010/courses/${id}`);
 
   useEffect(() => {
     if (data) {
-      const courseDetails = data.find((course) => course.id === Number(id));
-      setCourse(courseDetails);
+      setCourse(data);
     }
   }, [data]);
 

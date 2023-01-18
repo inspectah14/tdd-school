@@ -51,6 +51,18 @@
         "Purchasing",
         "Merchandising"
       ]
+    },
+    {
+      "firstName": "Patrik",
+      "lastName": "Munoz Lundberg",
+      "socialNumber": "cdvcxcxvcx",
+      "email": "xcvcxvcxv",
+      "phone": "cxvcxvcxvcx",
+      "competencies": [
+        "History",
+        "Languages"
+      ],
+      "id": 3
     }
   ]
 }

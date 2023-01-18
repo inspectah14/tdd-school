@@ -26,12 +26,11 @@ const TeacherDetails = () => {
   const [teacher, setTeacher] = useState({});
   const { id } = useParams();
 
-  const { data, error } = useFetchLists("http://localhost:3010/teachers");
+  const { data, error } = useFetchLists(`http://localhost:3010/teachers/${id}`);
 
   useEffect(() => {
     if (data) {
-      const teacherDetails = data.find((teacher) => teacher.id === Number(id));
-      setTeacher(teacherDetails);
+      setTeacher(data);
     }
   }, [data]);
 
