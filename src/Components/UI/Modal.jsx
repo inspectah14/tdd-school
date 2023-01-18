@@ -29,7 +29,7 @@ const Card = styled.div`
 `;
 
 const Header = styled.div`
-  background: crimson;
+  background: #0b1316;
   padding: 1rem;
 `;
 

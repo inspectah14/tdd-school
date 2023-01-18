@@ -8,11 +8,13 @@ const StyledWrapper = styled.div`
   width: 70%;
   border: 2px solid black;
   border-radius: 5px;
-  margin: 20px 0 20px 0;
+  margin: 50px 0 20px 0;
+  padding-bottom: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  background: whitesmoke;
 `;
 
 const H2 = styled.h2`
@@ -22,9 +24,6 @@ const H2 = styled.h2`
 const Lists = () => {
   const [courses, setCourses] = useState([]);
   const [teachers, setTeachers] = useState([]);
-  const [showModal, setShowModal] = useState(false);
-
-  const context = useContext(AuthContext);
 
   const { data: courseData, error: courseError } = useFetch({
     url: "http://localhost:3010/courses",
@@ -54,10 +53,6 @@ const Lists = () => {
       console.log(teacherError);
     }
   }, [courseError, teacherError]);
-
-  const handleShowModal = () => {
-    setShowModal(true);
-  };
 
   return (
     <>

@@ -24,6 +24,17 @@ const InputWrapper = styled.div`
   height: 50px;
 `;
 
+const StyledButton = styled.button`
+  width: 130px;
+  padding: 5px;
+  border: 1px solid #0b1316;
+  border-radius: 5px;
+  background: black;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+`;
+
 const Login = () => {
   const [buttonDisabled, setButtonDisabled] = useState(true);
   const [userName, setUsername] = useState("");
@@ -84,9 +95,9 @@ const Login = () => {
           />
         </InputWrapper>
         <InputWrapper justify>
-          <button type="submit" disabled={buttonDisabled}>
+          <StyledButton type="submit" disabled={buttonDisabled}>
             Login
-          </button>
+          </StyledButton>
         </InputWrapper>
       </StyledForm>
     </StyledSection>

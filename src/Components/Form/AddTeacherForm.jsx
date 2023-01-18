@@ -6,6 +6,10 @@ const StyledForm = styled.form`
   justify-content: space-evenly;
   align-items: center;
   height: 700px;
+  width: 400px;
+  background: whitesmoke;
+  border: 2px solid black;
+  border-radius: 5px;
 `;
 
 const InputWrapper = styled.div`
@@ -46,6 +50,10 @@ const StyledButton = styled.button`
   cursor: pointer;
 `;
 
+const H3 = styled.h3`
+  margin: 0;
+`;
+
 const AddTeacherForm = ({
   handleSubmit,
   firstNameInputRef,
@@ -58,6 +66,7 @@ const AddTeacherForm = ({
 }) => {
   return (
     <StyledForm onSubmit={handleSubmit}>
+      <H3>Add new teacher</H3>
       <InputWrapper justify="space-evenly">
         <StyledLabel htmlFor="firstName">First Name</StyledLabel>
         <StyledInputs
@@ -65,6 +74,7 @@ const AddTeacherForm = ({
           id="firstName"
           placeholder="First Name"
           ref={firstNameInputRef}
+          required
         />
       </InputWrapper>
       <InputWrapper justify="space-evenly">
@@ -74,36 +84,44 @@ const AddTeacherForm = ({
           id="lastName"
           placeholder="Last Name"
           ref={lastNameInputRef}
+          required
         />
       </InputWrapper>
       <InputWrapper justify="space-evenly">
         <StyledLabel htmlFor="socialNumber">Social Security Number</StyledLabel>
         <StyledInputs
           type="text"
+          inputMode="numeric"
+          pattern="[0-9]{10}"
+          maxLength={12}
           id="socialNumber"
           placeholder="Social Security Number"
           ref={socialNumberInputRef}
+          required
         />
       </InputWrapper>
       <InputWrapper justify="space-evenly">
         <StyledLabel htmlFor="email">Email</StyledLabel>
         <StyledInputs
-          type="text"
+          type="email"
           id="email"
           placeholder="Email"
           ref={emailInputRef}
+          required
         />
       </InputWrapper>
       <InputWrapper justify="space-evenly">
         <StyledLabel htmlFor="phone">Phone</StyledLabel>
         <StyledInputs
-          type="text"
+          type="tel"
           id="phone"
           placeholder="Phone"
           ref={phoneInputRef}
+          inputMode="numeric"
+          required
         />
       </InputWrapper>
-      <InputWrapper height justify="flex-start">
+      <InputWrapper height="true" justify="flex-start">
         <StyledLabel htmlFor="competencies" marginBottom>
           Competence Areas
         </StyledLabel>
@@ -111,6 +129,7 @@ const AddTeacherForm = ({
           multiple={true}
           value={competencies}
           onChange={onSelectChange}
+          required
         >
           <option value="Economics">Economics</option>
           <option value="History">History</option>

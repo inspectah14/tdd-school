@@ -35,7 +35,6 @@ const AddCourses = () => {
         </Modal>
       ) : (
         <>
-          <h3>Add new course</h3>
           <Form />
         </>
       )}

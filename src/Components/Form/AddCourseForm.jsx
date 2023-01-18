@@ -5,7 +5,11 @@ const StyledForm = styled.form`
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  height: 400px;
+  height: 600px;
+  width: 400px;
+  background: whitesmoke;
+  border: 2px solid black;
+  border-radius: 5px;
 `;
 
 const InputWrapper = styled.div`
@@ -13,13 +17,13 @@ const InputWrapper = styled.div`
   flex-direction: column;
   justify-content: ${(props) => (props.justify ? "center" : "space-between")};
   align-items: center;
-  height: ${(props) => (props.height ? "100px" : "60px")};
+  height: ${(props) => (props.height ? "150px" : "60px")};
 `;
 
 const StyledInputs = styled.input`
   width: 180px;
   border-radius: 5px;
-  padding: 2px 5px;
+  padding: 4px 5px;
 `;
 
 const StyledTextArea = styled.textarea`
@@ -54,6 +58,7 @@ const AddCourseForm = ({
 }) => {
   return (
     <StyledForm onSubmit={handleSubmit}>
+      <h3>Add new course</h3>
       <InputWrapper>
         <StyledLabel htmlFor="title">Course Title</StyledLabel>
         <StyledInputs
@@ -61,6 +66,7 @@ const AddCourseForm = ({
           id="title"
           placeholder="Title"
           ref={titleInputRef}
+          required
         />
       </InputWrapper>
       <InputWrapper>
@@ -68,22 +74,24 @@ const AddCourseForm = ({
           Course length in number of weeks
         </StyledLabel>
         <StyledInputs
-          type="text"
+          type="number"
           id="length"
           placeholder="Length"
           ref={lengthInputRef}
+          required
         />
       </InputWrapper>
       <InputWrapper>
         <StyledLabel htmlFor="startDate">Start Date</StyledLabel>
         <StyledInputs
-          type="text"
+          type="date"
           id="startDate"
           placeholder="Start"
           ref={startDateInputRef}
+          required
         />
       </InputWrapper>
-      <InputWrapper height>
+      <InputWrapper height="true">
         <StyledLabel htmlFor="descr" marginBottom>
           Course Description
         </StyledLabel>
@@ -91,7 +99,8 @@ const AddCourseForm = ({
           id="descr"
           placeholder="Description"
           ref={descrInputRef}
-          rows="5"
+          rows="10"
+          required
         />
       </InputWrapper>
       <InputWrapper justify>

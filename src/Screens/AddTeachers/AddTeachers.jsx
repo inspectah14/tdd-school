@@ -14,10 +14,6 @@ const StyledMain = styled.main`
   padding-top: 30px;
 `;
 
-const H3 = styled.h3`
-  margin: 0;
-`;
-
 const AddTeachers = () => {
   const [showModal, setShowModal] = useState(false);
   const context = useContext(AuthContext);
@@ -38,7 +34,6 @@ const AddTeachers = () => {
         </Modal>
       ) : (
         <>
-          <H3>Add new teacher</H3>
           <Form />
         </>
       )}
