@@ -1,5 +1,28 @@
 import React, { useState, useContext } from "react";
 import AuthContext from "../../store/auth-context";
+import styled from "styled-components";
+
+const StyledSection = styled.section`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const StyledForm = styled.form`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 170px;
+`;
+
+const InputWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: ${(props) => (props.justify ? "center" : "space-between")};
+  align-items: center;
+  height: 50px;
+`;
 
 const Login = () => {
   const [buttonDisabled, setButtonDisabled] = useState(true);
@@ -39,9 +62,9 @@ const Login = () => {
   };
 
   return (
-    <section>
-      <form onSubmit={onLoginHandler}>
-        <div>
+    <StyledSection>
+      <StyledForm onSubmit={onLoginHandler}>
+        <InputWrapper>
           <label htmlFor="userName">Username/Email</label>
           <input
             id="userName"
@@ -49,8 +72,8 @@ const Login = () => {
             value={userName}
             onChange={onChangeUsernameHandler}
           />
-        </div>
-        <div>
+        </InputWrapper>
+        <InputWrapper>
           <label htmlFor="password">Password</label>
           <input
             type="password"
@@ -59,14 +82,14 @@ const Login = () => {
             value={password}
             onChange={onChangePasswordHandler}
           />
-        </div>
-        <div>
+        </InputWrapper>
+        <InputWrapper justify>
           <button type="submit" disabled={buttonDisabled}>
             Login
           </button>
-        </div>
-      </form>
-    </section>
+        </InputWrapper>
+      </StyledForm>
+    </StyledSection>
   );
 };
 

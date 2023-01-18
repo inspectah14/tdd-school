@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import styled from "styled-components";
 import Burger from "../HamburgerMenu/Burger/Burger";
 import Menu from "../HamburgerMenu/Menu/Menu";
+import AuthContext from "../../store/auth-context";
 
 const StyledHeader = styled.header`
   width: 100%;
@@ -61,9 +62,30 @@ const StyledLink = styled(Link)`
   color: white;
 `;
 
+const StyledButton = styled.button`
+  width: 140px;
+  height: 29px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 29px;
+  text-align: center;
+  color: white;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+`;
+
 const Header = () => {
   const [isOpen, setOpen] = useState(false);
+  const context = useContext(AuthContext);
   const menuId = "main-menu";
+
+  const onLogoutHandler = (e) => {
+    e.preventDefault();
+    context.onLogout();
+  };
+
   return (
     <StyledHeader>
       <>
@@ -78,6 +100,9 @@ const Header = () => {
           <StyledLink to="/">home</StyledLink>
           <StyledLink to="/addcourses">add courses</StyledLink>
           <StyledLink to="/addteachers">add teachers</StyledLink>
+          {context.isLoggedIn && (
+            <StyledButton onClick={onLogoutHandler}>log out</StyledButton>
+          )}
         </LinkBox>
       </NavBar>
     </StyledHeader>

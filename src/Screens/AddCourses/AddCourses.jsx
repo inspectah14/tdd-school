@@ -1,28 +1,38 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import styled from "styled-components";
 import Login from "../../Components/Login/Login";
 import AuthContext from "../../store/auth-context";
-// import AddCourseForm from "../../Components/Courses/AddCourses/AddCourseForm";
 import Form from "../../Components/Form/Form";
+import Modal from "../../Components/UI/Modal";
 
 const StyledMain = styled.main`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   width: 100%;
+  height: calc(100vh - 80px);
+  padding-top: 50px;
 `;
 
 const AddCourses = () => {
+  const [showModal, setShowModal] = useState(false);
   const context = useContext(AuthContext);
+
+  useEffect(() => {
+    if (!context.isLoggedIn) {
+      setShowModal(true);
+    } else {
+      setShowModal(false);
+    }
+  }, [context.isLoggedIn]);
 
   return (
     <StyledMain>
-      {!context.isLoggedIn ? (
-        <>
-          <h3>Please login below to add new course</h3>
+      {showModal ? (
+        <Modal title="Please login below to add new course">
           <Login />
-        </>
+        </Modal>
       ) : (
         <>
           <h3>Add new course</h3>
